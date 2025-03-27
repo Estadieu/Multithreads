@@ -1,5 +1,6 @@
 package bandeau;
-
+//ESTADIEU 27/03/2025
+//Ajout de BandeauLock
 public class ExampleScenario {
 
     /**
@@ -33,8 +34,8 @@ public class ExampleScenario {
         s.addEffect(new Rainbow("Comme c'est joli !", 30), 1);
         s.addEffect(new Rotate("2 tours à droite", 180, 4000, true), 2);
         s.addEffect(new Rotate("2 tours à gauche", 180, 4000, false), 2);
-        // On cree le bandeau
-        Bandeau b = new Bandeau();
+        // On cree le bandeauLock
+        BandeauLock b = new BandeauLock();
         b.setMessage(message);
         b.sleep(2000);
         // On joue le scenario sur le bandeau

@@ -1,5 +1,6 @@
 package bandeau;
-
+//ESTADIEU 27/03/2025
+//Ajout de BandeauLock
 public class ExerciceAvecThreads {
 
     public static void main(String[] args) {
@@ -10,15 +11,16 @@ public class ExerciceAvecThreads {
     public void exemple() {
 
         Scenario s = makeScenario();
-        // On cree les bandeaux
-        var b1 = new Bandeau();
-        var b2 = new Bandeau();
-        var b3 = new Bandeau();
+        // On cree les bandeauxLock
+        BandeauLock b1 = new BandeauLock();
+        BandeauLock b2 = new BandeauLock();
+        BandeauLock b3 = new BandeauLock();
         System.out.println("CTRL-C pour terminer le programme");
         // On doit jouer le scénario en même temps sur les trois bandeaux
         // On crée un thread pour chaque bandeau
         s.playOn(b1);
         s.playOn(b2);
+        s.addEffect(new Rainbow("Test EFFETS !", 30), 1);
         s.playOn(b3);
         // On rejoue le scénario sur b1 quand le premier jeu est fini
         s.playOn(b1);
